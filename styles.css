@@ -1,7 +1,7 @@
 /* 打字机效果的关键帧和样式 */
 @keyframes typing {
     0% { width: 0; }
-    50% { width: 60%; }
+    50% { width: 70%; }
     100% { width: 0; }
 }
 

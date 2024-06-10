@@ -1,7 +1,7 @@
 /* 打字机效果的关键帧和样式 */
 @keyframes typing {
     0% { width: 0; }
-    50% { width: 42%; }
+    50% { width: 60%; }
     100% { width: 0; }
 }
 
@@ -16,6 +16,6 @@
     margin: 0 auto; /* 随着打字进行产生滚动效果 */
     letter-spacing: .15em; /* 根据需要调整 */
     animation: 
-        typing 7s steps(20, end) infinite,
+        typing 7s steps(21, end) infinite,
         blink-caret 1s step-end infinite;
 }

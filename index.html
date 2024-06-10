@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Prompt——简洁易用的GPT提示词仓库</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <!-- 网页大标题 -->
+        <h1 class="text-5xl font-bold text-center my-6">Easy Prompt——简洁易用的GPT提示词仓库</h1>
+        <h2 class="text-3xl font-medium text-center my-4 typewriter">驾驭未来的最好方式就是创造未来</h2>
+        <!-- 搜索框和标签 -->
+        <div class="flex flex-col items-center my-4">
+            <input class="form-input px-4 py-2 w-1/2" type="text" placeholder="搜索提示词...(助手名字、作者、提示词)">
+            <!-- 标签 -->
+            <div class="flex mt-4">
+                <a href="#语言&文学" class="tag bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded m-1" data-target="语言&文学">语言&文学</a>
+                <a href="#编程&技术" class="tag bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-1" data-target="编程&技术">编程&技术</a>
+                <a href="#生活&技能" class="tag bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded m-1" data-target="生活&技能">生活&技能</a>
+                <a href="#娱乐&活动" class="tag bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded m-1" data-target="娱乐&活动">娱乐&活动</a>
+                <a href="#旅行&文化" class="tag bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded m-1" data-target="旅行&文化">旅行&文化</a>
+                <a href="#职业&教育" class="tag bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded m-1" data-target="职业&教育">职业&教育</a>
+                <a href="#心理&社交" class="tag bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded m-1"" data-target="心理&社交">心理&社交</a>
+                <a href="#效率&工具" class="tag bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded m-1" data-target="效率&工具">效率&工具</a>
+            </div>
+        </div>
+
+        <!-- 提示词卡片区域 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- 分类标题 -->
+            <h2 id="语言&文学" class="col-span-full text-2xl font-bold my-4">✏️语言&文学</h2>
+            <div class="prompt-card bg-white rounded-lg shadow p-4">
+                <h2 class="text-xl font-semibold">助手名字</h2>
+                <p class="text-gray-600">作者</p>
+                <p class="mt-2">这里是提示词正文...</p>
+                <button class="copy-button mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right">复制</button>
+            </div>
+            <h2 id="编程&技术" class="col-span-full text-2xl font-bold my-4">💻编程&技术</h2>
+            <h2 id="生活&技能" class="col-span-full text-2xl font-bold my-4">🌟生活&技能</h2>
+            <h2 id="娱乐&活动" class="col-span-full text-2xl font-bold my-4">🎉娱乐&活动</h2>
+            <h2 id="旅行&文化" class="col-span-full text-2xl font-bold my-4">🗺️旅行&文化</h2>
+            <h2 id="职业&教育" class="col-span-full text-2xl font-bold my-4">🎓职业&教育</h2>
+            <h2 id="心理&社交" class="col-span-full text-2xl font-bold my-4">🤗心理&社交</h2>
+            <h2 id="效率&工具" class="col-span-full text-2xl font-bold my-4">⚙️效率&工具</h2>
+        </div>
+    </div>
+</body>
+</html>

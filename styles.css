@@ -1,50 +1,50 @@
 .typewriter::before {
-    animation: 5s linear 0s infinite running typewriter;
     content: "";
+    animation: typewriter 5s linear 0s infinite;
 }
 
 @keyframes typewriter {
-    0% {content: "";}
-    2% {content: "j";}
-    4% {content: "ji";}
-    6% {content: "jin"}
-    8% {content: "jin"}
-    10% {content: "jint"}
-    12% {content: "jinti"}
-    14% {content: "jintia"}
-    16% {content: "jintian"}
-    18% {content: "今天l"}
-    20% {content: "今天li"}
-    22% {content: "今天liao"}
-    24% {content: "今天聊"}
-    28% {content: "今天聊d"}
-    30% {content: "今天聊di"}
-    32% {content: "今天聊dia"}
-    34% {content: "今天聊dian"}
-    36% {content: "今天聊点s"}
-    38% {content: "今天聊点sh"}
-    40% {content: "今天聊点she"}
-    42% {content: "今天聊点shen"}
-    44% {content: "今天聊点shenm"}
-    46% {content: "今天聊点shenme"}
-    48% {content: "今天聊点什么"}
-    50% {content: "今天聊点什么h"}
-    52% {content: "今天聊点什么ha"}
-    54% {content: "今天聊点什么hao"}
-    56% {content: "今天聊点什么好"}
-    58% {content: "今天聊点什么好n"}
-    60% {content: "今天聊点什么好ne"}
-    62% {content: "今天聊点什么好呢"}
-    64% {content: "今天聊点什么好呢?"}
-    76% {content: "今天聊点什么好呢"}
-    78% {content: "今天聊点什么好"}
-    79% {content: "今天聊点什么"}
-    80% {content: "今天聊点什"}
-    82% {content: "今天聊点"}
-    84% {content: "今天聊"}
-    86% {content: "今天"}
-    88% {content: "今"}
-    90% {content: ""}
+    0% { content: ""; }
+    2% { content: "j"; }
+    4% { content: "ji"; }
+    6% { content: "jin"; }
+    8% { content: "jin"; }
+    10% { content: "jint"; }
+    12% { content: "jinti"; }
+    14% { content: "jintia"; }
+    16% { content: "jintian"; }
+    18% { content: "今天l"; }
+    20% { content: "今天li"; }
+    22% { content: "今天liao"; }
+    24% { content: "今天聊"; }
+    28% { content: "今天聊d"; }
+    30% { content: "今天聊di"; }
+    32% { content: "今天聊dia"; }
+    34% { content: "今天聊dian"; }
+    36% { content: "今天聊点s"; }
+    38% { content: "今天聊点sh"; }
+    40% { content: "今天聊点she"; }
+    42% { content: "今天聊点shen"; }
+    44% { content: "今天聊点shenm"; }
+    46% { content: "今天聊点shenme"; }
+    48% { content: "今天聊点什么"; }
+    50% { content: "今天聊点什么h"; }
+    52% { content: "今天聊点什么ha"; }
+    54% { content: "今天聊点什么hao"; }
+    56% { content: "今天聊点什么好"; }
+    58% { content: "今天聊点什么好n"; }
+    60% { content: "今天聊点什么好ne"; }
+    62% { content: "今天聊点什么好呢"; }
+    64% { content: "今天聊点什么好呢?"; }
+    76% { content: "今天聊点什么好呢"; }
+    78% { content: "今天聊点什么好"; }
+    79% { content: "今天聊点什么"; }
+    80% { content: "今天聊点什"; }
+    82% { content: "今天聊点"; }
+    84% { content: "今天聊"; }
+    86% { content: "今天"; }
+    88% { content: "今"; }
+    90% { content: ""; }
 }
 
 .prompt-text {
@@ -54,33 +54,34 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* 打开模态框的函数 */
-function openModal(fullText) {
-  document.getElementById('modal-content').innerText = fullText;
-  document.getElementById('modal').classList.remove('hidden');
-  document.getElementById('modal-backdrop').classList.remove('hidden');
-}
-
-/* 关闭模态框的函数 */
-function closeModal() {
-  document.getElementById('modal').classList.add('hidden');
-  document.getElementById('modal-backdrop').classList.add('hidden');
-}
-
-/* 更新查看按钮的事件监听器 */
-viewButtons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    var fullText = button.parentElement.querySelector('.prompt-text').innerText;
-    openModal(fullText);
-  });
-});
 
 /* 覆盖复制按钮的悬停样式 */
 .copy-button:hover {
-  background-color: #4CAF50; /* 这是按钮正常状态下的背景颜色 */
+    background-color: #4CAF50; /* 这是按钮正常状态下的背景颜色 */
 }
 
 /* 当按钮处于复制成功状态时的悬停样式 */
 .copy-button.bg-green-500:hover {
-  background-color: #4CAF50; /* 保持复制成功状态下的背景颜色 */
+    background-color: #4CAF50; /* 保持复制成功状态下的背景颜色 */
 }
+/* 打开模态框的函数 */
+function openModal(fullText) {
+    document.getElementById('modal-content').innerText = fullText;
+    document.getElementById('modal').classList.remove('hidden');
+    document.getElementById('modal-backdrop').classList.remove('hidden');
+};
+
+/* 关闭模态框的函数 */
+function closeModal() {
+    document.getElementById('modal').classList.add('hidden');
+    document.getElementById('modal-backdrop').classList.add('hidden');
+};
+
+/* 更新查看按钮的事件监听器 */
+const viewButtons = document.querySelectorAll('.view-button');
+viewButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        var fullText = button.parentElement.querySelector('.prompt-text').innerText;
+        openModal(fullText);
+    });
+});

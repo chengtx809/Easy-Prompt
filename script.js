@@ -4,7 +4,7 @@ function openModal(fullText) {
     document.getElementById('modal').classList.remove('hidden');
     document.getElementById('modal-backdrop').classList.remove('hidden');
   }
-  
+}) 
   // Function to close the modal
   function closeModal() {
     document.getElementById('modal').classList.add('hidden');
@@ -84,9 +84,8 @@ function openModal(fullText) {
           });
       });
   });
-  //回到顶部按钮
   window.onscroll = function() {scrollFunction()};
-  
+
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       document.getElementById("myBtn").style.display = "flex"; // 显示按钮

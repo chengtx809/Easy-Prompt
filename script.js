@@ -4,7 +4,6 @@ function openModal(fullText) {
     document.getElementById('modal').classList.remove('hidden');
     document.getElementById('modal-backdrop').classList.remove('hidden');
   }
-}) 
   // Function to close the modal
   function closeModal() {
     document.getElementById('modal').classList.add('hidden');
@@ -83,19 +82,20 @@ function openModal(fullText) {
               target.scrollIntoView({ behavior: 'smooth' });
           });
       });
-  });
-  window.onscroll = function() {scrollFunction()};
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("myBtn").style.display = "flex"; // 显示按钮
-    } else {
-      document.getElementById("myBtn").style.display = "none"; // 隐藏按钮
-    }
-  }
-  
-  // 当用户点击按钮时，回到页面顶部
-  function topFunction() {
-    document.body.scrollTop = 0; // 对于 Safari
-    document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
-  }
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "flex"; // 显示按钮
+        } else {
+          document.getElementById("myBtn").style.display = "none"; // 隐藏按钮
+        }
+      }
+      
+      // 当用户点击按钮时，回到页面顶部
+      function topFunction() {
+        document.body.scrollTop = 0; // 对于 Safari
+        document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
+      }
+  });

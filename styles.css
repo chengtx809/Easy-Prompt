@@ -46,3 +46,41 @@
     88% {content: "今"}
     90% {content: ""}
 }
+
+.prompt-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 打开模态框的函数 */
+function openModal(fullText) {
+  document.getElementById('modal-content').innerText = fullText;
+  document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('modal-backdrop').classList.remove('hidden');
+}
+
+/* 关闭模态框的函数 */
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+  document.getElementById('modal-backdrop').classList.add('hidden');
+}
+
+/* 更新查看按钮的事件监听器 */
+viewButtons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    var fullText = button.parentElement.querySelector('.prompt-text').innerText;
+    openModal(fullText);
+  });
+});
+
+/* 覆盖复制按钮的悬停样式 */
+.copy-button:hover {
+  background-color: #4CAF50; /* 这是按钮正常状态下的背景颜色 */
+}
+
+/* 当按钮处于复制成功状态时的悬停样式 */
+.copy-button.bg-green-500:hover {
+  background-color: #4CAF50; /* 保持复制成功状态下的背景颜色 */
+}

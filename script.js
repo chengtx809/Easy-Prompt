@@ -1,5 +1,5 @@
 // Function to open the modal
-function openModal(fullText) {
+  function openModal(fullText) {
     document.getElementById('modal-content').innerText = fullText;
     document.getElementById('modal').classList.remove('hidden');
     document.getElementById('modal-backdrop').classList.remove('hidden');
@@ -104,25 +104,3 @@ function openModal(fullText) {
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   });
-
-  /* 打开模态框的函数 */
-function openModal(fullText) {
-    document.getElementById('modal-content').innerText = fullText;
-    document.getElementById('modal').classList.remove('hidden');
-    document.getElementById('modal-backdrop').classList.remove('hidden');
-};
-
-/* 关闭模态框的函数 */
-function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
-    document.getElementById('modal-backdrop').classList.add('hidden');
-};
-
-/* 更新查看按钮的事件监听器 */
-const viewButtons = document.querySelectorAll('.view-button');
-viewButtons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
-        var fullText = button.parentElement.querySelector('.prompt-text').innerText;
-        openModal(fullText);
-    });
-});
